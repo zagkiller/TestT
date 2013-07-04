@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+if(App::environment() == 'local') {
+    Route::controller('legacy/sql', 'Legacy\SqlController');
+}
+
+Route::get('/article-{articleId}.html', 'ArticleController@articleId');
+//Route::get('/product-new-{shopProduct}.html', 'ShopProductController@showProduct');
