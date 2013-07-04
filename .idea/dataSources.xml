@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3599647577">
+    <data-source source="LOCAL" name="Data Source" product="SQLite" version="3.7.15" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="481d2fdd-2f43-47a0-919b-166301379920">
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\data\sl\app\database\production.sqlite</jdbc-url>
+      <libraries>
+        <library>
+          <url>jar://$PROJECT_DIR$/../sqlite-jdbc-3.7.15-SNAPSHOT-2.jar!/</url>
+        </library>
+        <library>
+          <url>file://$PROJECT_DIR$/../xerial-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
