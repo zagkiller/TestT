@@ -1,13 +1,14 @@
 <?php
 
-class ArticleController extends BaseController{
+class ArticleController extends BaseController
+{
 
-    protected $layout = 'article.base';
+    protected $layout = 'article.article_base';
 
-    public function showArticle(article $article)
+    public function showArticle(Article $article)
     {
-        var_dump($article,111);
-        $this->layout->content = View::make('article.show')->with('article', $article);
+        View::share('article', $article);
+        return View::make('article.article_base')->with('article', $article);
     }
 
 }
