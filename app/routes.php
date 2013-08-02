@@ -15,5 +15,14 @@ if(App::environment() == 'local') {
     Route::controller('legacy/sql', 'Legacy\SqlController');
 }
 
-Route::get('/article-{articleId}.html', 'ArticleController@articleId');
-//Route::get('/product-new-{shopProduct}.html', 'ShopProductController@showProduct');
+Route::model('article_id', 'Article');
+
+Route::get('/article-{article_id}.html', 'ArticleController@showArticle');
+/*Route::get('/article-{id}.html', function ($id) {
+
+        $article = Article::find($id);
+        var_dump($article); die();
+        return View::make('article.base')->with('article', $article);
+    }
+);
+*/
